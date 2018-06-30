@@ -4,29 +4,32 @@
 #
 Name     : more-itertools
 Version  : 4.1.0
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/db/0b/f5660bf6299ec5b9f17bd36096fa8148a1c843fa77ddfddf9bebac9301f7/more-itertools-4.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/db/0b/f5660bf6299ec5b9f17bd36096fa8148a1c843fa77ddfddf9bebac9301f7/more-itertools-4.1.0.tar.gz
 Summary  : More routines for operating on iterables, beyond itertools
 Group    : Development/Tools
 License  : MIT
 Requires: more-itertools-python3
+Requires: more-itertools-license
 Requires: more-itertools-python
 Requires: six
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pytest
-
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : tox
-BuildRequires : virtualenv
 
 %description
 More Itertools
         ==============
+
+%package license
+Summary: license components for the more-itertools package.
+Group: Default
+
+%description license
+license components for the more-itertools package.
+
 
 %package python
 Summary: python components for the more-itertools package.
@@ -54,16 +57,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1525898768
+export SOURCE_DATE_EPOCH=1530323505
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python3.6/site-packages python3 setup.py test
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/more-itertools
+cp LICENSE %{buildroot}/usr/share/doc/more-itertools/LICENSE
+cp docs/license.rst %{buildroot}/usr/share/doc/more-itertools/docs_license.rst
 python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -71,6 +72,11 @@ echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/more-itertools/LICENSE
+/usr/share/doc/more-itertools/docs_license.rst
 
 %files python
 %defattr(-,root,root,-)
