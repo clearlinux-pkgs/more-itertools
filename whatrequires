@@ -1,5 +1,8 @@
 # This file contains recursive sources that require this package
 CherryPy
+ceph
 cheroot
 conda
 pytest
+python-zstandard
+zipp
