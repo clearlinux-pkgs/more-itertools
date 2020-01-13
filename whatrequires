@@ -3,6 +3,7 @@ CherryPy
 ceph
 cheroot
 conda
+jaraco.functools
 pytest
 python-zstandard
 zipp
