@@ -6,4 +6,3 @@ conda
 jaraco.functools
 pytest
 python-zstandard
-zipp
