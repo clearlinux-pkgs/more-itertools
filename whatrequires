@@ -3,6 +3,8 @@ CherryPy
 ceph
 cheroot
 conda
+jaraco.classes
 jaraco.functools
 pytest
 python-zstandard
+tap.py
