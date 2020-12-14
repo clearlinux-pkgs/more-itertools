@@ -4,7 +4,7 @@
 #
 Name     : more-itertools
 Version  : 8.6.0
-Release  : 34
+Release  : 35
 URL      : https://files.pythonhosted.org/packages/b0/0f/da7bf94283720a148fe4d7335c8b74b67c8e978c6498487d699a0d86c72b/more-itertools-8.6.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b0/0f/da7bf94283720a148fe4d7335c8b74b67c8e978c6498487d699a0d86c72b/more-itertools-8.6.0.tar.gz
 Summary  : More routines for operating on iterables, beyond itertools
