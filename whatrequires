@@ -6,5 +6,4 @@ cheroot
 conda
 jaraco.classes
 jaraco.functools
-python-zstandard
 tap.py
