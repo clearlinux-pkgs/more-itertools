@@ -1,5 +1,5 @@
 PKG_NAME := more-itertools
-URL = https://files.pythonhosted.org/packages/14/77/a496c86b4bf9328269b65dc4d97f127cc78af59539a13b49631b36896234/more-itertools-8.11.0.tar.gz
+URL = https://files.pythonhosted.org/packages/dc/b5/c216ffeace7b89b7387fe08e1b39a07c6da38ea82c60e2e630dd5883813b/more-itertools-8.12.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
